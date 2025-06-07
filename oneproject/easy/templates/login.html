@@ -1,0 +1,38 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyCheck login</title>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+</head>
+
+<body>
+    <div class="container">
+        <div class="left">
+            <a href="#"><img src="{% static 'images/OilCheck.jpg' %}" alt="logo easycheck" class="logo"></a>
+            <h2>EasyCheck</h2>
+        </div>
+        <div class="right">
+            <form action="">
+                <label class="text">Your Email</label>
+                <input type="email" name="email" placeholder="Enter your email" required />
+
+                <label class="text">Password</label>
+                <input type="password" name="password" placeholder="Enter your password" required />
+
+                <div class="options">
+                    <input type="checkbox" name="remember" /> Remember me
+                    <a href="#">Forgot password?</a>
+                </div>
+
+                <button type="submit">SIGN IN</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
