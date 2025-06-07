@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Jost", sans-serif;
+}
+
+.logohead {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none;
+}
+
+.logohead h3 {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 270px;
+    height: 100vh;
+    background: #103F32;
+    transition: all 0.4s ease;
+}
+
+
+.sidebar .sidebar-header {
+    display: flex;
+    position: relative;
+    padding: 25px 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sidebar-header .header-logo img {
+    width: 46px;
+    height: 46px;
+    display: block;
+    object-fit: contain;
+    border-radius: 30%;
+}
+
+.sidebar-header .sidebar-toggler,
+.sidebar-menu-button {
+    position: absolute;
+    right: 20px;
+    height: 35px;
+    width: 35px;
+    color: #151A2D;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    background: #dee4dc;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    transition: 0.4s ease;
+}
+
+
+.sidebar-nav .nav-list {
+    list-style: none;
+    display: flex;
+    gap: 4px;
+    padding: 0 15px;
+    flex-direction: column;
+    transform: translateY(15px);
+    transition: 0.4s ease;
+}
+
+.sidebar .sidebar-nav .primary-nav {
+    overflow-y: auto;
+    scrollbar-width: thin;
+    padding-bottom: 20px;
+    height: calc(100vh - 227px);
+    scrollbar-color: transparent transparent;
+}
+
+.sidebar .sidebar-nav .primary-nav:hover {
+    scrollbar-color: #EEF2FF transparent;
+}
+
+.sidebar.collapsed .sidebar-nav .primary-nav {
+    overflow: unset;
+    transform: translateY(65px);
+}
+
+.sidebar-nav .nav-item .nav-link {
+    color: #fff;
+    display: flex;
+    gap: 12px;
+    white-space: nowrap;
+    border-radius: 8px;
+    padding: 11px 15px;
+    align-items: center;
+    text-decoration: none;
+    border: 1px solid #3a6250;
+    transition: 0.4s ease;
+}
+
+.sidebar-nav .nav-item:is(:hover, .open)>.nav-link:not(.dropdown-title) {
+    background: #ffffffb9;
+}
+
+.sidebar .nav-link .nav-label {
+    transition: opacity 0.3s ease;
+}
+
+
+.sidebar-nav .secondary-nav {
+    position: absolute;
+    bottom: 35px;
+    width: 100%;
+    background: #103F32;
+}
+
+.sidebar-nav .nav-item {
+    position: relative;
+}
+
+.cardmaterial {
+    display: flex;
+    justify-content: center;
+}
+
+.searching {
+    display: flex;
+    gap: 50px;
+    margin-top: 20px;
+}
+
+.searching h2 {
+    color: #103F32;
+}
+
+.bothsection {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+}
+
+
+.cardmaterial {
+    width: 70%;
+}
+
+.userandinfoprof {
+    background-color: #d4f3d973;
+    width: 28%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px;
+    max-width: 350px;
+
+}
+
+.userfield {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.userpic {
+    width: 45px;
+    border-radius: 50%;
+}
+
+.searching {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+input#searchbox {
+    width: 300px;
+    padding: 10px 15px;
+    border-radius: 20px;
+    background-color: #d8f0e9;
+    border: none;
+    font-size: 15px;
+    color: #103F32;
+    height: auto;
+}
+
+.wrapper {
+    font-size: 20px;
+    margin-top: 30px;
+    width: 290px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.wrapper header {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    padding: 25px 30px 10px;
+    justify-content: space-between;
+}
+
+header .icons {
+    display: flex;
+}
+
+header .icons span {
+    height: 38px;
+    width: 38px;
+    margin: 0 1px;
+    cursor: pointer;
+    color: #878787;
+    text-align: center;
+    line-height: 38px;
+    font-size: 1.9rem;
+    user-select: none;
+    border-radius: 50%;
+}
+
+.icons span:last-child {
+    margin-right: -10px;
+}
+
+header .icons span:hover {
+    background: #f2f2f2;
+}
+
+header .current-date {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.calendar {
+    padding: 20px;
+}
+
+.calendar ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    text-align: center;
+}
+
+.calendar .days {
+    margin-bottom: 20px;
+}
+
+.calendar li {
+    color: #333;
+    width: calc(100% / 7);
+    font-size: 1.07rem;
+}
+
+.calendar .weeks li {
+    font-weight: 500;
+    cursor: default;
+}
+
+.calendar .days li {
+    z-index: 1;
+    cursor: pointer;
+    position: relative;
+    margin-top: 30px;
+}
+
+.days li.inactive {
+    color: #aaa;
+}
+
+.days li.active {
+    color: #fff;
+}
+
+.days li::before {
+    position: absolute;
+    content: "";
+    left: 50%;
+    top: 50%;
+    height: 40px;
+    width: 40px;
+    z-index: -1;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.days li.active::before {
+    background: #336022;
+}
+
+.days li:not(.active):hover::before {
+    background: #f2f2f2;
+}
+
+.text1 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 20px;
+    gap: 150px;
+}
+
+.userm {
+    width: 290px;
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    margin-top: 10px;
+}
+
+.userpic2 {
+    width: 40px;
+}
