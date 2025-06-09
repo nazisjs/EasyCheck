@@ -17,7 +17,9 @@
             <h2>EasyCheck</h2>
         </div>
         <div class="right">
-            <form action="">
+            <form method="POST" action="">
+                {% csrf_token %}
+                {{form}}
                 <label class="text">Your Email</label>
                 <input type="email" name="email" placeholder="Enter your email" required />
 

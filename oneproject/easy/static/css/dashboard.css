@@ -129,7 +129,7 @@
 
 .cardmaterial {
     display: flex;
-    justify-content: center;
+    justify-content: left;
 }
 
 .searching {
@@ -143,11 +143,16 @@
 }
 
 .bothsection {
+    width: 70%;
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-
+    justify-content: center;
 }
+
+.both {
+    width: 100%;
+    max-width: 800px;
+}
+
 
 
 .cardmaterial {
@@ -156,15 +161,17 @@
 
 .userandinfoprof {
     background-color: #d4f3d973;
-    width: 28%;
+    width: 350px;
+    flex-shrink: 0;
+    top: 0;
+    bottom: 0;
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
     align-items: center;
-    padding: 20px;
-    max-width: 350px;
 
 }
+
 
 .userfield {
     display: flex;
@@ -320,4 +327,104 @@ header .current-date {
 
 .userpic2 {
     width: 40px;
+}
+
+.content {
+    padding: 20px 30px;
+    flex-grow: 1;
+    background-color: #f4f9f4;
+}
+
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search-bar {
+    display: flex;
+    background-color: #9FC0B2;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.search-bar input {
+    border: none;
+    padding: 10px;
+    background: transparent;
+    color: white;
+    width: 200px;
+    outline: none;
+}
+
+.search-bar input::placeholder {
+    color: white;
+}
+
+.search-bar button {
+    background: transparent;
+    border: none;
+    padding: 0 15px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.filters {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: left;
+}
+
+.filters select {
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+.equipments {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    background-color: #d1f0df;
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 30px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    width: 120px;
+    margin-right: 20px;
+}
+
+.info {
+    flex: 1;
+}
+
+.check-btn {
+    background-color: #77c587;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.allthree {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 60px;
+    margin-left: 340px;
 }

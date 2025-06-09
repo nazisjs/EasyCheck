@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>EasyCheck Register</title>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+</head>
+
+<body>
+    <div class="container">
+        <div class="left">
+            <a href="#"><img src="{% static 'images/OilCheck.jpg' %}" alt="logo easycheck" class="logo"></a>
+            <h2>EasyCheck</h2>
+        </div>
+        <div class="right">
+            <form method="POST">
+                {% csrf_token %}
+                <h2 style="margin-bottom: 20px;">Register</h2>
+
+                <label class="text">Username</label>
+                <input type="text" name="username" placeholder="Choose a username" required>
+
+                <label class="text">Email</label>
+                <input type="email" name="email" placeholder="Enter your email" required>
+
+                <label class="text">First Name</label>
+                <input type="text" name="first_name" placeholder="Enter your first name" required>
+
+                <label class="text">Last Name</label>
+                <input type="text" name="last_name" placeholder="Enter your last name" required>
+
+                <label class="text">Password</label>
+                <input type="password" name="password1" placeholder="Create a password" required>
+
+                <label class="text">Confirm Password</label>
+                <input type="password" name="password2" placeholder="Confirm password" required>
+
+                <button type="submit">REGISTER</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+{% extends "dashboard.html" %}
+{% load static %}
+
+{% block title %}Checking page{% endblock title %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/check.css' %}" />
+{% endblock head %}
+
+{% block content %}
+<div class="container">
+    <div class="close" id="checkPanel">
+        <i class="fa-solid fa-xmark" onclick="closeCheckPanel()"></i>
+    </div>
+    <div class="text">
+        <h2>Checking...</h2>
+        {% for report in reports%}
+        <h3>{{report.title}}</h3>
+        {% endfor %}
+    </div>
+
+    <div class="check-container">
+        <div class="progress">
+            <div class="step" id="step1"><span class="circle" id="circle1"></span>Check 1</div>
+            <div class="step" id="step2"><span class="circle" id="circle2"></span>Check 2</div>
+            <div class="step" id="step3"><span class="circle" id="circle3"></span>Check 3</div>
+            <div class="step" id="step4"><span class="circle" id="circle4"></span>Check 4</div>
+        </div>
+
+        <div class="check-panel">
+            <div class="checks" id="checks-container">
+                <!-- Checkboxes will be loaded dynamically here -->
+            </div>
+            <div class="controls">
+                <button onclick="prevStep()" id="prevBtn" disabled>&larr;</button>
+                <button onclick="completeStep()" id="completeBtn" disabled>Complete the check</button>
+                <button onclick="nextStep()" id="nextBtn" disabled>&rarr;</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="{% static 'js/check.js' %}"></script>
+<script>const reportUrl = "{% url 'report' %}"</script>
+
+{% endblock content %}

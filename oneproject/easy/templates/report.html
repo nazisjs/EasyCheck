@@ -1,0 +1,62 @@
+{% extends "dashboard.html" %}
+{% load static %}
+
+{% block title %}Report page{% endblock title %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/report.css' %}" />
+{% endblock head %}
+
+{% block content %}
+<div class="content">
+    <div class="topbar">
+        <div class="searching">
+            <h2>Report</h2>
+            <div class="search-bar">
+                <input type="text" placeholder="Search" />
+                <button>></button>
+            </div>
+            <div class="search-bar">
+                <select name="" id="">
+                    <option value="">ID</option>
+                </select>
+            </div>
+            <div class="search-bar">
+                <select name="" id="">
+                    <option value="">Inspector</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="user-info">
+            <div>
+                <p><strong>Ivan</strong></p>
+                <p>Id: 0123456789</p>
+            </div>
+            <div class="icons">
+                <i class="fas fa-user-circle"></i>
+                <i class="fas fa-bell"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="report-container">
+        <div class="report-header">
+            <div><span>👤</span> Checker: Anna Petrova</div>
+            <div><span>📅</span> Date: 03.06.2025</div>
+        </div>
+
+        <div id="reportCards" class="report-cards">
+            <!-- Report items will be injected here -->
+        </div>
+
+        <div class="report-footer">
+            <div class="overall-status">
+                <span>⚠️</span> Overall Result: <strong id="overallResult">Attention Required</strong>
+            </div>
+            <button class="download-btn">⬇️ Download Report</button>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
